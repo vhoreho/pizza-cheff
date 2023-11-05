@@ -1,0 +1,26 @@
+<form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+  <input id="name" type="text" required formControlName="name" placeholder="Ваше имя"
+    (ngModelChange)="onNameChange($event)" />
+  <input id="address" type="text" required formControlName="address" placeholder="Адрес доставки" />
+  <input id="phone" type="tel" required formControlName="phone" placeholder="Телефон" />
+  <button type="submit" [disabled]="!contactForm.valid" class="muller-bold">Оформить заказ</button>
+</form>
+
+<div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+  <div class="error-text" *ngIf="name.errors?.['required']">Имя не может быть пустым</div>
+  <div class="error-text" *ngIf="name.errors?.['pattern']">Точек не должно быть</div>
+</div>
+
+<div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+  <div class="error-text" *ngIf="address.errors?.['required']">Адрес не может быть пустым</div>
+</div>
+
+<div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+  <div class="error-text" *ngIf="phone.errors?.['required']">Телефон не может быть пустым</div>
+  <div class="error-text" *ngIf="phone.errors?.['pattern']">Номер телефона должен начинаться с + и не содержать букв
+  </div>
+</div>
+
+<div *ngIf="isSubmitted" class="thank-you-popup muller-bold">
+  Спасибо за заказ!
+</div>

@@ -1,0 +1,57 @@
+/* fonts.css */
+
+/* Muller Black */
+@font-face {
+  font-family: 'Muller Black';
+  src: url('../assets/fonts/MullerBlack.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Muller Bold */
+@font-face {
+  font-family: 'Muller Bold';
+  src: url('../assets/fonts/MullerBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Muller Extra Bold */
+@font-face {
+  font-family: 'Muller Extra Bold';
+  src: url('../assets/fonts/MullerExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* Muller Regular */
+@font-face {
+  font-family: 'Muller Regular';
+  src: url('../assets/fonts/MullerRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Muller Black */
+.muller-black {
+  font-family: 'Muller Black', sans-serif;
+  font-weight: 900;
+}
+
+/* Muller Bold */
+.muller-bold {
+  font-family: 'Muller Bold', sans-serif;
+  font-weight: 700;
+}
+
+/* Muller Extra Bold */
+.muller-extra-bold {
+  font-family: 'Muller Extra Bold', sans-serif;
+  font-weight: 800;
+}
+
+/* Muller Regular */
+.muller-regular {
+  font-family: 'Muller Regular', sans-serif;
+  font-weight: 400;
+}

@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="container flex-row flex-cross-center py-4">
+    <a href="/" class="flex-row flex-cross-center text-no-decoration logo">
+      <img src="../../../assets/images/pizza.png" alt="logo">
+      <div class="flex-column muller-black logo-text">
+        <span>
+          pizza
+        </span>
+        <span>
+          cheff
+        </span>
+      </div>
+    </a>
+    <nav class="header-nav">
+      <ul class="header-nav-list flex-row">
+        <li *ngFor="let link of anchorLinks" class="header-nav-item">
+          <a [href]="link.href" class="header-nav-item text-secondary text-no-decoration">{{ link.text }}</a>
+        </li>
+      </ul>
+      <div class="hamburger-menu" (click)="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <app-mobile-menu *ngIf="isMenuOpen" [isMenuOpen]="isMenuOpen" [anchorLinks]="anchorLinks"
+        (toggleMenu)="toggleMenu()"></app-mobile-menu>
+    </nav>
+
+  </div>
+
+</header>

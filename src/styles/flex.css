@@ -1,0 +1,88 @@
+/* Flexbox Classes */
+
+/* Flex-контейнеры */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Главная ось */
+.flex-main-start {
+  justify-content: flex-start;
+}
+
+.flex-main-end {
+  justify-content: flex-end;
+}
+
+.flex-main-center {
+  justify-content: center;
+}
+
+.flex-main-between {
+  justify-content: space-between;
+}
+
+.flex-main-around {
+  justify-content: space-around;
+}
+
+/* Поперечная ось */
+.flex-cross-start {
+  align-items: flex-start;
+}
+
+.flex-cross-end {
+  align-items: flex-end;
+}
+
+.flex-cross-center {
+  align-items: center;
+}
+
+.flex-cross-stretch {
+  align-items: stretch;
+}
+
+.flex-cross-baseline {
+  align-items: baseline;
+}
+
+/* Флекс-элементы */
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-no-shrink {
+  flex-shrink: 0;
+}
+
+/* Горизонтальное выравнивание элементов в центре контейнера */
+.flex-main-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Горизонтальное выравнивание элементов по краям контейнера */
+.flex-main-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Вертикальное выравнивание элементов в центре контейнера */
+.flex-main-center-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

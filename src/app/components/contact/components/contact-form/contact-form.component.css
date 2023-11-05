@@ -1,0 +1,58 @@
+label,
+input {
+  display: block;
+  margin-bottom: 24px;
+  border: 1px solid var(--secondary-color);
+  padding: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Muller Regular";
+  font-size: 18px;
+}
+
+input::placeholder {
+  color: #cba86e;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  padding: 25px 20px;
+  border: none;
+  width: 100%;
+}
+
+button:hover {
+  background: var(--primary-hover-color);
+}
+
+button:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+button:hover:disabled {
+  background-color: var(--primary-color)
+}
+
+button:disabled {
+  opacity: 0.8;
+}
+
+.thank-you-popup {
+  text-align: center;
+  font-size: 20px;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: rollin .3s ease;
+}
+
+.error-text {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}

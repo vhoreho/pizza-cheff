@@ -1,0 +1,16 @@
+<section>
+  <div class="container pizzas">
+    <h2 class="muller-bold text-center text-secondary m-0 mb-17">Выберите свою любимую пиццу</h2>
+    <div class="grid-container">
+      <div *ngFor="let pizza of pizzas" class="quarter-column pizzas-item " (click)="openModal(pizza)">
+        <img [src]="pizza.imageUrl" [alt]="pizza.name" class="pizza-image">
+        <h5 class="pizza-title muller-bold">{{pizza.name}}</h5>
+        <p class="pizza-composition">{{pizza.composition}}</p>
+        <button class="pizza-button muller-regular">В корзину</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-pizza-modal *ngIf="selectedPizza" [selectedPizza]="selectedPizza"
+  (closeModalEvent)="selectedPizza = null"></app-pizza-modal>

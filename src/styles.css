@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Muller Regular', sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

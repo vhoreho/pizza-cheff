@@ -1,0 +1,16 @@
+<div [ngClass]="{ 'menu-overlay': isMenuOpen }"></div>
+<div class="menu-container" [ngClass]="{ 'menu-open': isMenuOpen }">
+  <ul class="header-nav-list flex-column  ">
+    <li *ngFor="let link of anchorLinks" class="header-nav-item">
+      <a [href]="link.href" class="header-nav-item text-secondary text-no-decoration">{{ link.text }}</a>
+    </li>
+  </ul>
+  <button class="close-button" (click)="toggleMobileMenu()">
+    <svg class="close-icon" viewBox="0 0 1436 1054">
+      <path
+        d="M718.5,453.8l224-224.3c20.4-20.4,53.3-20.4,73.6,0c20.4,20.4,20.4,53.3,0,73.6l-224,224.6l224,224
+    	c20.4,20.4,20.4,53.3,0,73.6c-20.4,20.4-53.3,20.4-73.6,0l-224-224l-224.6,224c-20.4,20.4-53.3,20.4-73.6,0
+    	c-20.4-20.4-20.4-53.3,0-73.6l224-224L420.4,303.2c-20.5-20.4-20.5-53.3-0.1-73.6s53.3-20.4,73.6,0l224.6,224V453.8z" />
+    </svg>
+  </button>
+</div>

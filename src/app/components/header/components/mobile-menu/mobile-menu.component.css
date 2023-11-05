@@ -1,0 +1,51 @@
+.menu-container {
+  display: none;
+  position: absolute;
+  transition: all .3s ease;
+}
+
+.menu-open {
+  display: block;
+}
+
+.menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.close-icon {
+  width: 28px;
+  height: 28px;
+  fill: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+  .menu-container {
+    display: block;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 20px 30px;
+  }
+
+  .header-nav-list {
+    list-style: none;
+    gap: 16px;
+    padding-left: 0;
+    font-size: 18px;
+  }
+}
